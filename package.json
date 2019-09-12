@@ -1,23 +1,38 @@
 {
   "name": "vue-simple-comp",
   "version": "0.1.0",
-  "private": true,
+  "description": "自用的一些简单vue组件",
+  "private": false,
+  "main": "lib/vue-simple-com.umd.min.js",
+  "keywords": [
+    "vue",
+    "component",
+    "lotttery"
+  ],
+  "author": "majunhong",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name vue-simple-com --dest lib packages/index.js",
+    "prepublish": "npm run lib"
   },
   "dependencies": {
     "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "vue-simple-comp": "^0.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",
     "@vue/cli-plugin-eslint": "^3.11.0",
     "@vue/cli-service": "^3.11.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
@@ -27,9 +42,11 @@
     },
     "extends": [
       "plugin:vue/essential",
-      "eslint:recommended"
+      "@vue/airbnb"
     ],
-    "rules": {},
+    "rules": {
+      "eqeqeq": 0
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
