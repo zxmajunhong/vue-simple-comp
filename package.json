@@ -1,6 +1,6 @@
 {
   "name": "vue-simple-comp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "自用的一些简单vue组件",
   "private": false,
   "main": "lib/vue-simple-com.umd.min.js",
@@ -17,6 +17,14 @@
     "lint": "vue-cli-service lint",
     "lib": "vue-cli-service build --target lib --name vue-simple-com --dest lib packages/index.js",
     "prepublish": "npm run lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zxmajunhong/vue-simple-comp.git"
+  },
+  "homepage": "https://github.com/zxmajunhong/vue-simple-comp#readme",
+  "bugs": {
+    "url": "https://github.com/zxmajunhong/vue-simple-comp/issues"
   },
   "dependencies": {
     "core-js": "^2.6.5",
