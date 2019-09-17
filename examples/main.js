@@ -1,12 +1,12 @@
 import Vue from 'vue';
-// import { install } from 'vue-simple-comp';
 import App from './App.vue';
-// eslint-disable-next-line import/named
-import { install } from '../lib/vue-simple-com.umd';
+import router from './router';
+
+// console.log('simpleComp', simpleComp);
 
 Vue.config.productionTip = false;
-Vue.use(install);
 
 new Vue({
   render: h => h(App),
+  router,
 }).$mount('#app');

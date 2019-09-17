@@ -25,10 +25,6 @@ export default {
       type: String,
       default: '开始',
     },
-    cb: {
-      type: Function,
-      default: () => {},
-    },
     cycle: { // 基本需要转动的次数
       type: Number,
       default: 50,
@@ -52,6 +48,7 @@ export default {
         8: 4,
       },
       prizeList: [],
+      hasChange: false, // 判断是否绑定修改奖品索引的方法
     };
   },
   mounted() {
@@ -66,6 +63,7 @@ export default {
       }
     }
     this.prizeList = temp;
+    this.hasChange = !!this.$listeners.changeIndex;
   },
   methods: {
     startLottery() {
@@ -88,6 +86,8 @@ export default {
           start = 1;
         }
         that.cur = start;
+        // eslint-disable-next-line no-unused-expressions
+        that.hasChange && that.$emit('changeIndex', start);
       }
 
       let times = 0; // 转动次数
