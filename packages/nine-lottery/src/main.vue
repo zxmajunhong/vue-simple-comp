@@ -58,7 +58,7 @@ export default {
       let i = 0;
       while (i < 9) {
         const index = this.prizeIndexMap[i];
-        temp[i] = i === 4 ? { class: 'lottery-btn', click: this.startLottery } : Object.assign({ class: 'prize', order: index + 1, click: () => {} }, this.list[index] || { name: `奖品${index}` });
+        temp[i] = i === 4 ? { class: 'lottery-btn', click: this.startLottery } : Object.assign({ class: 'prize', order: index + 1, click: () => {} }, this.list[index] || { name: `奖品${index + 1}` });
         i += 1;
       }
     }
