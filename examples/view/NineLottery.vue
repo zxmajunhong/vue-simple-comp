@@ -50,7 +50,7 @@ export default {
       setTimeout(() => {
         // 模拟ajax请求抽奖
         this.$refs.lottery.startCircle(4, () => {
-          console.log('抽中了第四个');
+          alert('抽中了第四个');
         });
       }, 500);
     },
