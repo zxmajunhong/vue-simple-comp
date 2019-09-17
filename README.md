@@ -51,4 +51,4 @@ export default {
 ```
 
 ## 说明
-每个组件的详细使用说明点击上面的组件列表查看
+每个组件的详细使用说明点击上面的组件列表查看 [在线实例](https://zxmajunhong.github.io/vue-simple-comp/dist/index.html)

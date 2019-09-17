@@ -1,4 +1,5 @@
 module.exports = {
+  publicPath: 'vue-simple-comp/dist/',
   pages: {
     index: {
       entry: 'examples/main.js',
