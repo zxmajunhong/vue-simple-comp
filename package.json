@@ -1,6 +1,6 @@
 {
   "name": "vue-simple-comp",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "自用的一些简单vue组件",
   "private": false,
   "main": "lib/vue-simple-com.umd.min.js",
